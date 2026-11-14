@@ -1,0 +1,144 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GamerClub - Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #signupForm label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #765A8C;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topBar">
+        ✦ Rawnaa & Jana ✦
+    </div>
+
+    <header id="top">
+        <h1>
+            <img src="images/logo.png"
+                 alt="GamerClub Logo"
+                 width="40"
+                 height="40"
+                 style="vertical-align: middle;">
+            GamerClub
+        </h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#reviews">Reviews</a>
+            <a href="index.html#topGames">Top Games</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html" class="loginLink">Log In</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </header>
+
+
+    <!-- Sign Up Section -->
+    <section class="signupSection">
+
+        <img src="images/logo.png"
+             alt="GamerClub Logo"
+             class="loginImage"
+             usemap="#signupMap">
+
+        <map name="signupMap">
+            <area shape="default" href="about.html" alt="About Us">
+        </map>
+
+        <h2>Create Your Account ♡</h2>
+
+        <p>Join GamerClub and share your love for games!</p>
+
+
+        <!-- Sign Up Form -->
+        <form id="signupForm" onsubmit="return validateSignup()">
+
+            <p>
+                <label for="username">Username</label>
+
+                <input type="text"
+                       id="username"
+                       placeholder="Choose a username"
+                       required>
+            </p>
+
+            <p>
+                <label for="email">Email</label>
+
+                <input type="email"
+                       id="email"
+                       placeholder="Enter your email"
+                       required>
+            </p>
+
+            <p>
+                <label for="password">Password</label>
+
+                <input type="password"
+                       id="password"
+                       placeholder="Enter your password"
+                       required>
+            </p>
+
+            <p>
+                <label for="confirmPassword">Confirm Password</label>
+
+                <input type="password"
+                       id="confirmPassword"
+                       placeholder="Confirm your password"
+                       required>
+            </p>
+
+            <p>
+                <input type="submit"
+                       class="primaryButton"
+                       value="Sign Up">
+            </p>
+
+            <p>
+                Already have an account?
+                <a href="login.html">Log In</a>
+            </p>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>GamerClub - Game Review Website</p>
+        <p>Made with love for gamers!</p>
+        <a href="#top">Back to Top</a>
+    </footer>
+
+
+    <!-- Sign Up Validation -->
+    <script>
+                function validateSignup() {
+                    var password = document.getElementById("password").value;
+                    var confirmPassword = document.getElementById("confirmPassword").value;
+
+                    if (password != confirmPassword) {
+                        alert("Passwords do not match!");
+                        return false;
+                    }
+
+                    alert("Sign Up information is valid!");
+                    window.location.href = "index.html";
+                    return false;
+                }
+    </script>
+
+</body>
+</html>

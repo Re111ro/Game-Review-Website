@@ -1,0 +1,434 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GamerClub - Game Reviews</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .welcome h2 {
+            font-family: Georgia, serif;
+            color: #340c51;
+            font-size: 44px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topBar">
+        ✦ Rawnaa & Jana ✦
+    </div>
+
+
+    <!-- Header -->
+    <header id="top">
+
+        <h1>
+            <img src="images/logo.png"
+                 alt="GamerClub Logo"
+                 width="40"
+                 height="40"
+                 style="vertical-align: middle;">
+            GamerClub
+        </h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#reviews">Reviews</a>
+            <a href="index.html#topGames">Top Games</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html" class="loginLink">Log In</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+
+        <div class="welcomeText">
+
+            <h2>Welcome to GamerClub!</h2>
+
+            <p>
+                Discover amazing games, explore our honest reviews,
+                and share your gaming experiences with others!
+            </p>
+
+            <p>
+                <a href="#reviews">Explore Game Reviews</a>
+                <a href="#community" class="secondButton">Write Your Review</a>
+            </p>
+
+        </div>
+
+
+        <div class="welcomeImage">
+
+            <img src="images/banner.png"
+                 alt="Kirby Game Banner"
+                 width="600"
+                 height="200"
+                 usemap="#gameMap">
+
+            <map name="gameMap">
+                <area shape="default"
+                      href="about.html"
+                      alt="About Us">
+            </map>
+
+        </div>
+
+    </section>
+
+
+    <!-- Game Reviews -->
+    <section id="reviews">
+
+        <h2>Our Game Reviews</h2>
+
+        <p>
+            Explore games selected and reviewed by our team!
+        </p>
+
+        <div class="gameList">
+
+
+            <!-- Stardew Valley -->
+            <article class="gameCard"
+                     onclick="openReview('Stardew Valley', 'Rating: 9.8/10', 'Stardew Valley is a relaxing farming game where you can grow crops, make friends, and build your own peaceful life.')">
+
+                <h3>Stardew Valley</h3>
+
+                <img src="images/stardew.jpg"
+                     alt="Stardew Valley"
+                     width="180">
+
+                <p>Genre: Simulation / RPG</p>
+                <p class="gameRating">Rating: 9.8/10</p>
+
+                <p>
+                    A relaxing farming game where you can grow crops,
+                    make friends, and build your own peaceful life.
+                </p>
+
+                <button type="button" class="primaryButton">
+                    Read Review
+                </button>
+
+            </article>
+
+
+            <!-- Undertale -->
+            <article class="gameCard"
+                     onclick="openReview('Undertale', 'Rating: 9.7/10', 'Undertale is a unique RPG where your choices affect the story. You can fight monsters or show them mercy, and every character has something special to discover.')">
+
+                <h3>Undertale</h3>
+
+                <img src="images/undertale.jpg"
+                     alt="Undertale"
+                     width="180">
+
+                <p>Genre: RPG</p>
+                <p class="gameRating">Rating: 9.7/10</p>
+
+                <p>
+                    A unique adventure where your choices matter
+                    and every character has a story to tell.
+                </p>
+
+                <button type="button" class="primaryButton">
+                    Read Review
+                </button>
+
+            </article>
+
+
+            <!-- Hollow Knight -->
+            <article class="gameCard"
+                     onclick="openReview('Hollow Knight', 'Rating: 9.6/10', 'Hollow Knight is a beautiful adventure game set in a mysterious underground kingdom. Explore hidden areas, fight challenging enemies, and uncover the secrets of Hallownest.')">
+
+                <h3>Hollow Knight</h3>
+
+                <img src="images/hollowknight.jpg"
+                     alt="Hollow Knight"
+                     width="180">
+
+                <p>Genre: Adventure / Metroidvania</p>
+                <p class="gameRating">Rating: 9.6/10</p>
+
+                <p>
+                    Explore a mysterious underground kingdom
+                    filled with challenging battles and secrets.
+                </p>
+
+                <button type="button" class="primaryButton">
+                    Read Review
+                </button>
+
+            </article>
+
+
+            <!-- Little Nightmares -->
+            <article class="gameCard"
+                     onclick="openReview('Little Nightmares', 'Rating: 9.2/10', 'Little Nightmares is a dark puzzle adventure where you play as Six, a small girl trying to escape a mysterious place called The Maw. The game combines creepy environments, clever puzzles, and an unforgettable atmosphere.')">
+
+                <h3>Little Nightmares</h3>
+
+                <img src="images/littlenightmares.jpg"
+                     alt="Little Nightmares"
+                     width="180">
+
+                <p>Genre: Horror / Puzzle</p>
+                <p class="gameRating">Rating: 9.2/10</p>
+
+                <p>
+                    A dark adventure filled with puzzles,
+                    mysterious places, and unusual creatures.
+                </p>
+
+                <button type="button" class="primaryButton">
+                    Read Review
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Review Popup -->
+    <div id="reviewPopup">
+
+        <img id="popupImage"
+             src="images/stardew.jpg"
+             alt="Game Cover">
+
+        <h2 id="popupTitle">Game Review</h2>
+
+        <p id="popupRating"></p>
+
+        <p id="popupText"></p>
+
+        <button type="button"
+                class="primaryButton"
+                onclick="closeReview()">
+            Close
+        </button>
+
+    </div>
+
+
+    <!-- Top Rated Games -->
+    <section id="topGames" class="contentBox">
+
+        <h2 style="color: #9565CB;">Top Rated Games</h2>
+
+        <p>Our favorite games ranked by their ratings!</p>
+
+        <table border="1">
+
+            <tr>
+                <th>Rank</th>
+                <th>Game</th>
+                <th>Genre</th>
+                <th>Rating</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Stardew Valley</td>
+                <td>Simulation / RPG</td>
+                <td>9.8/10</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Undertale</td>
+                <td>RPG</td>
+                <td>9.7/10</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Hollow Knight</td>
+                <td>Adventure</td>
+                <td>9.6/10</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Little Nightmares</td>
+                <td>Horror / Puzzle</td>
+                <td>9.2/10</td>
+            </tr>
+
+        </table>
+
+
+        <h3>Explore Game Genres</h3>
+
+        <ul>
+            <li>Adventure</li>
+            <li>RPG</li>
+            <li>Simulation</li>
+            <li>Horror</li>
+            <li>Puzzle</li>
+        </ul>
+
+    </section>
+
+
+    <!-- Community Reviews -->
+    <section id="community">
+
+        <div class="communityIntro">
+
+            <p>YOUR TURN TO PLAY</p>
+
+            <h2>Your opinion belongs here, too. ♡</h2>
+
+            <p>
+                Have a game you can't stop thinking about?
+                Share a little review — every voice makes this space better.
+            </p>
+
+        </div>
+
+
+        <div class="communityLayout">
+
+
+            <!-- Review Form -->
+            <form id="reviewForm"
+                  class="reviewPanel"
+                  onsubmit="return submitReview()">
+
+                <p>
+                    Your Name:
+                    <input type="text"
+                           name="reviewer"
+                           id="reviewer"
+                           placeholder="What should we call you?"
+                           required>
+                </p>
+
+
+                <div class="reviewChoices">
+
+                    <p>
+                        Select a Game:
+
+                        <select name="game" id="game">
+                            <option value="Stardew Valley">Stardew Valley</option>
+                            <option value="Undertale">Undertale</option>
+                            <option value="Hollow Knight">Hollow Knight</option>
+                            <option value="Little Nightmares">Little Nightmares</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        Your Rating:
+
+                        <select name="rating" id="rating">
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                    </p>
+
+                </div>
+
+
+                <p>Your Review:</p>
+
+                <textarea name="review"
+                          id="review"
+                          rows="5"
+                          cols="45"
+                          placeholder="Tell us what you loved about the game..."
+                          required></textarea>
+
+                <p>
+                    <input type="submit"
+                           class="primaryButton"
+                           value="Submit Review">
+                </p>
+
+            </form>
+
+
+            <!-- Community Review Results -->
+            <div class="reviewWall reviewPanel">
+
+                <h3>Community Reviews</h3>
+
+                <div id="reviewResult"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <hr>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>GamerClub - Game Review Website</p>
+
+        <p id="footerMessage">Made with love for gamers!</p>
+
+        <a href="#top">Back to Top</a>
+
+    </footer>
+
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+
+    <!-- Embedded JavaScript -->
+    <script>
+
+                function submitReview() {
+
+                    var reviewer = document.getElementById("reviewer").value;
+                    var game = document.getElementById("game").value;
+                    var rating = document.getElementById("rating").value;
+                    var review = document.getElementById("review").value;
+
+                    if (review.length < 10) {
+                        alert("Please write at least 10 characters in your review.");
+                        return false;
+                    }
+
+                    var stars = "";
+
+                    for (var i = 0; i < rating; i++) {
+                        stars += "★";
+                    }
+
+                    document.getElementById("reviewResult").textContent +=
+                        reviewer + " - " + game +
+                        "\n" + stars +
+                        "\n" + review + "\n\n";
+
+                    return false;
+                }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GamerClub - About Us</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .aboutPage {
+            background: linear-gradient(to right, #FFF0F8, #EDE1FF);
+            padding: 40px 30px;
+        }
+
+        .aboutIntro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            margin: 0 30px 30px;
+        }
+
+            .aboutIntro h2 {
+                color: #340c51;
+                font-family: Georgia, serif;
+                font-size: 40px;
+            }
+
+            .aboutIntro img {
+                width: 260px;
+                max-width: 40%;
+                height: auto;
+                border-radius: 15px;
+                border: 2px solid #E1D0FF;
+            }
+
+        .aboutCard h2 {
+            color: #9565CB;
+        }
+
+        .aboutCard section {
+            margin-bottom: 30px;
+        }
+
+        .aboutCard a {
+            color: #9565CB;
+        }
+
+        .aboutCard table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .aboutCard th,
+        .aboutCard td {
+            border: 1px solid #E1D0FF;
+            padding: 12px;
+        }
+
+        .aboutCard th {
+            background-color: #F3E5FC;
+        }
+
+        .contactField {
+            margin-bottom: 15px;
+        }
+
+            .contactField label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .contactField input,
+            .contactField textarea {
+                width: 100%;
+                box-sizing: border-box;
+                background-color: #FFF9FE;
+                border: 1px solid #E1D0FF;
+                border-radius: 12px;
+                padding: 12px;
+                font-size: 15px;
+            }
+
+        #contactBtn {
+            border-radius: 12px;
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topBar">
+        ✦ Rawnaa & Jana ✦
+    </div>
+
+    <header id="top">
+
+        <h1>
+            <img src="images/logo.png"
+                 alt="GamerClub Logo"
+                 width="40"
+                 height="40">
+            GamerClub
+        </h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#reviews">Reviews</a>
+            <a href="index.html#topGames">Top Games</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html" class="loginLink">Log In</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </header>
+
+
+    <!-- About Us Introduction -->
+    <main class="aboutPage">
+        <section class="aboutIntro">
+            <div>
+                <h2>About Us</h2>
+                <p>Learn more about GamerClub and the team behind it.</p>
+            </div>
+
+
+            <img src="images/logo.png"
+                 alt="GamerClub Logo"
+                 usemap="#aboutMap">
+
+
+            <map name="aboutMap">
+                <area shape="default" href="about.html" alt="About Us">
+            </map>
+        </section>
+
+
+        <article class="contentBox aboutCard">
+
+            <!-- Our Mission -->
+            <section>
+                <h2>Our Mission</h2>
+                <p>
+                    We are gamers ourselves and wanted a place to discover games
+                    and share our opinions. We created GamerClub to bring game
+                    reviews, ratings, and recommendations together in one place.
+                </p>
+                <p>
+                    <a href="#contact-section">Have a question? Jump directly to our contact form below.</a>
+                </p>
+            </section>
+
+
+            <!-- Why Join GamerClub -->
+            <section>
+                <h2>Why Join GamerClub?</h2>
+                <ul>
+                    <li><strong>Explore Reviews:</strong> Read our reviews of different games.</li>
+                    <li><strong>Write Reviews:</strong> Share your opinions with other players.</li>
+                    <li><strong>Top-Rated Games:</strong> Explore our favorite games and their ratings.</li>
+                    <li><strong>Discover New Games:</strong> Find something new to play.</li>
+                </ul>
+            </section>
+
+
+            <!-- Features Table -->
+            <section>
+                <h2>GamerClub at a Glance</h2>
+                <table border="1">
+                    <tr>
+                        <th>Feature</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Game Reviews</td>
+                        <td>Read game reviews and ratings from our team.</td>
+                    </tr>
+                    <tr>
+                        <td>Community Reviews</td>
+                        <td>Write a review and see it displayed on the page.</td>
+                    </tr>
+                </table>
+            </section>
+
+
+            <!-- Contact Us -->
+            <section id="contact-section">
+                <h2>Contact Us</h2>
+                <p>Have a question or feedback? Send us a message!</p>
+
+                <form name="contactForm" onsubmit="return validateContactForm()">
+                    <div class="contactField">
+                        <label for="contactName">Your Name:</label>
+                        <input type="text" id="contactName" name="contactName" placeholder="Enter your name">
+                    </div>
+
+                    <div class="contactField">
+                        <label for="contactEmail">Email:</label>
+                        <input type="text" id="contactEmail" name="contactEmail" placeholder="Enter your email">
+                    </div>
+
+                    <div class="contactField">
+                        <label for="contactMessage">Message:</label>
+                        <textarea id="contactMessage" name="contactMessage" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" id="contactBtn" class="primaryButton">Send Message</button>
+                </form>
+
+                <p><a href="#top">Back to Top</a></p>
+            </section>
+
+        </article>
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>GamerClub - Game Review Website</p>
+        <p>Made with love for gamers!</p>
+        <a href="#top">Back to Top</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

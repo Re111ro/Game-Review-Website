@@ -1,0 +1,478 @@
+﻿
+/* General Style */
+
+body {
+    background-color: #FFF7FC;
+    color: #483059;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/* Top Bar and Footer */
+
+.topBar {
+    background-color: #7945A4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #F3E5FC;
+    color: #765A8C;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Header and Navigation */
+
+header {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 15px 30px;
+    border-bottom: 2px solid #E1D0FF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    color: #7945A4;
+    font-size: 30px;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px #E1D0FF;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+nav a {
+    color: #765A8C;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 8px;
+    background-color: #FFFFFF;
+    padding: 10px 15px;
+    border: 1px solid #E1D0FF;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #B35FA9;
+    text-decoration: underline;
+}
+
+nav .loginLink {
+    margin-left: auto;
+}
+
+
+/* Shared Background */
+
+.welcome,
+.signupSection,
+#community {
+    background: linear-gradient(to right, #FFF0F8, #EDE1FF);
+}
+
+
+/* Shared Content Box */
+
+.contentBox {
+    box-shadow: 0 5px 20px #E5D0F1;
+    background-color: white;
+    margin: 30px;
+    padding: 30px;
+    border: 2px solid #E1D0FF;
+    border-radius: 20px;
+}
+
+
+/* Shared Buttons */
+
+.primaryButton {
+    background-color: #9565CB;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.primaryButton:hover {
+    background-color: #B35FA9;
+}
+
+.gameCard button,
+#reviewPopup button {
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 14px;
+}
+
+
+/* Welcome Section */
+
+.welcome {
+    text-align: left;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.welcomeText,
+.welcomeImage {
+    flex: 1;
+}
+
+.welcome p {
+    color: #765A8C;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.welcome img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid #E1D0FF;
+    box-shadow: 0 4px 10px #D5B8FA;
+}
+
+.welcomeText a {
+    display: inline-block;
+    background-color: #9565CB;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.welcomeText a:hover {
+    background-color: #B35FA9;
+}
+
+.welcomeText .secondButton {
+    background-color: white;
+    color: #9565CB;
+    border: 1px solid #9565CB;
+    margin-left: 10px;
+}
+
+.welcomeText .secondButton:hover {
+    background-color: #F3E5FC;
+}
+
+
+/* Game Reviews Section */
+
+#reviews {
+    padding: 30px;
+    box-shadow: 0 5px 20px #E5D0F1;
+}
+
+.gameList {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gameCard {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+    background-color: #FFF7FC;
+    border: 1px solid #E1D0FF;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 10px #E5D0F1;
+}
+
+.gameCard img {
+    transition: transform 0.3s;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gameCard img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.gameCard h3 {
+    color: #9565CB;
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.gameCard p {
+    color: #765A8C;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.gameCard .gameRating {
+    color: #9565CB;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gameCard button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+
+/* Review Popup */
+
+#reviewPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF7FC;
+    border: 2px solid #E1D0FF;
+    border-radius: 20px;
+    padding: 30px;
+    width: 400px;
+    max-width: 80%;
+    box-shadow: 0 5px 20px #D5B8FA;
+    z-index: 100;
+}
+
+#popupImage {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+#popupTitle {
+    color: #9565CB;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+#popupRating {
+    color: #B35FA9;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#popupText {
+    color: #765A8C;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Top Rated Games */
+
+#topGames table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#topGames th,
+#topGames td {
+    border: 1px solid #E1D0FF;
+    padding: 12px;
+}
+
+#topGames th {
+    background-color: #F3E5FC;
+    color: #9565CB;
+}
+
+#topGames ul {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+#topGames li {
+    background-color: #F3E5FC;
+    color: #9565CB;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+
+/* Community Reviews Section */
+
+#community {
+    padding: 50px 30px;
+}
+
+.communityIntro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.communityIntro h2 {
+    color: #340c51;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin: 15px;
+}
+
+.communityIntro p {
+    color: #9565CB;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Community Layout */
+
+.communityLayout {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.reviewPanel {
+    flex: 1;
+    min-width: 260px;
+    box-shadow: 0 5px 20px #E5D0F1;
+    background-color: white;
+    border: 1px solid #E1D0FF;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+
+/* Community Form Fields */
+
+#community input[type="text"],
+#community select,
+#community textarea {
+    background-color: #FFF9FE;
+    color: #483059;
+    border: 1px solid #E1D0FF;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 16px;
+}
+
+#reviewForm input[type="text"],
+#reviewForm select,
+#reviewForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Game and Rating Choices */
+
+.reviewChoices {
+    display: flex;
+    gap: 15px;
+}
+
+.reviewChoices p {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* Community Submit Button */
+
+#community input[type="submit"] {
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+#reviewForm input[type="submit"] {
+    box-shadow: 0 5px 20px #E5D0F1;
+    width: 100%;
+}
+
+
+/* Community Review Results */
+
+#reviewResult {
+    background-color: white;
+    color: #765A8C;
+    border: 1px solid #E1D0FF;
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+
+/* Sign Up Section */
+
+.signupSection {
+    padding: 50px 20px;
+    text-align: center;
+    min-height: 500px;
+}
+
+#signupForm {
+    text-align: left;
+    background-color: white;
+    border: 1px solid #E1D0FF;
+    border-radius: 20px;
+    padding: 30px;
+    width: 400px;
+    max-width: 80%;
+    margin: 30px auto;
+    box-shadow: 0 5px 20px #E5D0F1;
+}
+
+#signupForm input[type="text"],
+#signupForm input[type="email"],
+#signupForm input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #FFF9FE;
+    border: 1px solid #E1D0FF;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+#signupForm input[type="submit"] {
+    width: 100%;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 16px;
+}
+
+/* Shared Login and Sign Up Design */
+
+.loginImage,
+.signupSection > img {
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid #E1D0FF;
+}
+
+.loginSection h2,
+.signupSection h2 {
+    color: #340c51;
+    font-family: Georgia, serif;
+    font-size: 36px;
+}

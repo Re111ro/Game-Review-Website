@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GamerClub - Log In</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .loginSection {
+            background: linear-gradient(to right, #FFF0F8, #EDE1FF);
+            padding: 50px 20px;
+            text-align: center;
+            min-height: 500px;
+        }
+
+            .loginSection h2 {
+                color: #340c51;
+                font-family: Georgia, serif;
+                font-size: 36px;
+            }
+
+        .loginCard {
+            background-color: white;
+            border: 1px solid #E1D0FF;
+            border-radius: 20px;
+            padding: 30px;
+            width: 400px;
+            max-width: 80%;
+            margin: 30px auto;
+            box-shadow: 0 5px 20px #E5D0F1;
+            text-align: left;
+        }
+
+            .loginCard label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+                color: #765A8C;
+            }
+
+            .loginCard input {
+                width: 100%;
+                box-sizing: border-box;
+                background-color: #FFF9FE;
+                border: 1px solid #E1D0FF;
+                border-radius: 12px;
+                padding: 12px;
+                font-size: 15px;
+            }
+
+            .loginCard #loginBtn {
+                width: 100%;
+                border-radius: 12px;
+                padding: 14px;
+                font-size: 16px;
+            }
+
+        .loginImage {
+            width: 180px;
+            height: auto;
+            border-radius: 15px;
+            border: 2px solid #E1D0FF;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topBar">
+        ✦ Rawnaa & Jana ✦
+    </div>
+
+    <header id="top">
+        <h1>
+            <img src="images/logo.png"
+                 alt="GamerClub Logo"
+                 width="40"
+                 height="40"
+                 style="vertical-align: middle;">
+            GamerClub
+        </h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#reviews">Reviews</a>
+            <a href="index.html#topGames">Top Games</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html" class="loginLink">Log In</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </header>
+
+
+    <!-- Log In Section -->
+    <section class="loginSection">
+
+        <img src="images/logo.png"
+             alt="GamerClub Logo"
+             class="loginImage"
+             usemap="#loginMap">
+
+        <map name="loginMap">
+            <area shape="default" href="about.html" alt="About Us">
+        </map>
+
+        <h2>Welcome back, gamer ♡</h2>
+
+        <p>
+            Sign in to rate, review, and explore your favorite games!
+        </p>
+
+
+        <!-- Login Form -->
+        <div class="loginCard">
+
+            <form id="login-form"
+                  name="loginForm"
+                  onsubmit="return validateForm()">
+
+                <p>
+                    <label for="username">Username</label>
+
+                    <input type="text"
+                           id="username"
+                           name="username"
+                           placeholder="e.g. pixelKnight"
+                           required>
+                </p>
+
+                <p>
+                    <label for="password">Password</label>
+
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           placeholder="Enter your password"
+                           required>
+                </p>
+
+                <p>
+                    <button type="submit"
+                            id="loginBtn"
+                            class="primaryButton">
+                        Log In
+                    </button>
+                </p>
+
+                <p>
+                    Don't have an account?
+                    <a href="signup.html">Sign Up</a>
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>GamerClub - Game Review Website</p>
+        <p>Made with love for gamers!</p>
+        <a href="#top">Back to Top</a>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
